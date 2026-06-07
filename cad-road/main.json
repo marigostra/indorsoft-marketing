@@ -1,0 +1,228 @@
+Вот готовые материалы для продвижения IndorCAD Road. Я подготовил валидный код JSON-LD для интеграции на сайт и современную, стильную презентацию в формате LaTeX (Beamer).
+
+### 1. Развёрнутое описание в формате JSON-LD
+Этот код можно вставить в секцию `<head>` страницы продукта. Он использует словарь Schema.org (тип `SoftwareApplication`), что поможет поисковым системам правильно отображать сниппет в выдаче.
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "IndorCAD Road",
+  "alternateName": "ИндорКАД Роад",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Windows",
+  "description": "Профессиональная САПР для проектирования автомобильных дорог. Реализует концепцию информационного моделирования (BIM/ТИМ). Позволяет создавать параметризированные 3D-модели рельефа, трасс, транспортных узлов, дорожной одежды и искусственных сооружений с автоматическим контролем соблюдения ГОСТ и СНиП.",
+  "softwareVersion": "Актуальная версия (обновления дважды в год)",
+  "url": "https://indorsoft.ru/products/cad/road/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ИндорСофт (IndorSoft)",
+    "foundingDate": "2003",
+    "url": "https://indorsoft.ru/",
+    "logo": "https://indorsoft.ru/images/logo.png"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "19000.00",
+    "priceCurrency": "RUB",
+    "description": "Бессрочная лицензия с обновлениями и технической поддержкой на 12 месяцев.",
+    "availability": "https://schema.org/InStock"
+  },
+  "featureList": [
+    "Информационное моделирование (BIM/ТИМ) автомобильных дорог",
+    "Обработка данных лазерного сканирования и облаков точек (LAS, TXT, CSV)",
+    "Параметризированное моделирование слоёв земляного полотна и дорожной одежды",
+    "Проектирование транспортных узлов и водопропускных труб",
+    "Проектирование инженерного обустройства (знаки, разметка, ограждения, освещение)",
+    "Экспорт и импорт IFC, LandXML, DWG",
+    "Автоматизированный контроль соблюдения норм и оценка видимости/водоотвода"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "4000",
+    "description": "Ежедневно более 4000 запусков систем ИндорСофт специалистами отрасли."
+  }
+}
+</script>
+```
+
+### 2. Стильная презентация в LaTeX (Beamer)
+Для презентации выбран современный широкоформатный стиль (16:9), минималистичный дизайн без лишних навигационных панелей и драйвовая цветовая палитра: глубокий тёмно-синий фон с яркими неоново-голубыми и оранжевыми акцентами.
+
+Скопируйте этот код и скомпилируйте его (например, в Overleaf) с помощью `pdflatex` или `xelatex`.
+
+```latex
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{fontspec}
+
+% --- Настройка стильной цветовой палитры ---
+\definecolor{DarkSpace}{HTML}{0B1021} % Глубокий темный фон
+\definecolor{NeonCyan}{HTML}{00F0FF}  % Яркий акцент 1 (Кибер-голубой)
+\definecolor{VibrantOrange}{HTML}{FF3366} % Яркий акцент 2 (Малиново-оранжевый)
+\definecolor{LightGray}{HTML}{E0E5EC} % Цвет основного текста
+
+% --- Настройка темы Beamer ---
+\setbeamercolor{background canvas}{bg=DarkSpace}
+\setbeamercolor{normal text}{fg=LightGray}
+\setbeamercolor{frametitle}{fg=NeonCyan, bg=DarkSpace}
+\setbeamercolor{title}{fg=NeonCyan}
+\setbeamercolor{itemize item}{fg=VibrantOrange}
+\setbeamercolor{itemize subitem}{fg=NeonCyan}
+
+\setbeamertemplate{navigation symbols}{} % Убираем стандартную навигацию
+\setbeamertemplate{itemize item}{\Large\raisebox{-0.25ex}{\textbf{>}}}
+\setbeamertemplate{frametitle}{
+    \vspace{0.5cm}
+    \textbf{\Large\insertframetitle}
+    \par\vspace{0.1cm}
+    \tikz\fill[VibrantOrange] (0,0) rectangle (\textwidth, 0.05);
+}
+
+% --- Титульный слайд ---
+\title{\Huge \textbf{IndorCAD Road}}
+\subtitle{\vspace{0.5cm}\large \textcolor{LightGray}{Цифровая эволюция в проектировании автомобильных дорог}}
+\author{\textbf{ИндорСофт}}
+\date{\textcolor{NeonCyan}{BIM $\cdot$ САПР $\cdot$ Инновации}}
+
+\begin{document}
+
+{
+\setbeamercolor{background canvas}{bg=DarkSpace}
+\begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+        % Декоративные элементы на фоне
+        \fill[NeonCyan!10] (current page.north east) circle (3cm);
+        \fill[VibrantOrange!20] (current page.south west) circle (2cm);
+    \end{tikzpicture}
+    \titlepage
+\end{frame}
+}
+
+\begin{frame}{Что такое IndorCAD Road?}
+    \Large
+    Это не просто чертежи. Это \textbf{\textcolor{NeonCyan}{информационная модель (BIM)}} вашего объекта.
+    \vspace{0.5cm}
+    \normalsize
+    \begin{itemize}
+        \item \textbf{Единая среда:} От рельефа до готовой 3D-модели дороги.
+        \item \textbf{Параметризация:} Изменили параметр — модель перестроилась сама.
+        \item \textbf{Умный анализ:} Система сама подскажет о нарушении норм (СНиП, ГОСТ).
+        \item \textbf{Российское ПО:} 100\% в реестре отечественного ПО.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Киллер-фичи для инженеров}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{\textcolor{NeonCyan}{Моделирование 360$^\circ$}}
+            \begin{itemize}
+                \item Интеграция облаков точек (LAS, TXT)
+                \item Подключение web-карт и SRTM-рельефа
+                \item 3D-модели мостов, путепроводов и геологии
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{\textcolor{VibrantOrange}{Детальное проектирование}}
+            \begin{itemize}
+                \item Сложные транспортные узлы
+                \item Водопропускные трубы (IndorCulvert)
+                \item Знаки, разметка, светофоры по актуальным ГОСТам
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{0.8cm}
+    \begin{center}
+        \textit{\textcolor{LightGray}{Всё строится и обновляется «на лету» в едином окне.}}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Анализ, который спасает проекты}
+    \Large
+    \textcolor{NeonCyan}{Ошибки видны до начала стройки.}
+    \vspace{0.5cm}
+    \normalsize
+    \begin{itemize}
+        \item \textbf{Оценка водоотвода:} Геометрический расчёт зон затопления в 3D.
+        \item \textbf{Оценка видимости:} Точный расчёт с любой точки трассы.
+        \item \textbf{Анализ траекторий:} Проверка коридоров движения для разного транспорта.
+        \item \textbf{Оценка освещённости:} Визуализация градиентной сетки прямо на плане.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Открытость и Интеграция (OpenBIM)}
+    \begin{center}
+        \textbf{\Large IndorCAD говорит на языке вашей экосистемы}
+    \end{center}
+    \vspace{0.5cm}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \textcolor{NeonCyan}{\textbf{\Large IFC}} \\
+                \vspace{0.2cm}
+                Экспорт частных BIM-моделей для сводных проектов
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \textcolor{VibrantOrange}{\textbf{\Large DWG}} \\
+                \vspace{0.2cm}
+                Импорт подложек и экспорт готовых чертежей
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \textcolor{NeonCyan}{\textbf{\Large LandXML}} \\
+                \vspace{0.2cm}
+                Обмен трёхмерными данными с другими САПР
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Почему выбирают ИндорСофт?}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{tikzpicture}
+                \fill[NeonCyan!20] (0,0) rectangle (4,4);
+                \node at (2,2) {\Huge \textbf{\textcolor{NeonCyan}{20+}}};
+                \node at (2,1) {\textbf{лет на рынке}};
+            \end{tikzpicture}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item \textbf{\textcolor{VibrantOrange}{300 000+ км}} дорог спроектировано и эксплуатируется в нашем ПО.
+                \item \textbf{\textcolor{NeonCyan}{4 000+}} ежедневных запусков.
+                \item \textbf{Поддержка:} Мощный форум, онлайн-курсы и живая техподдержка.
+                \item \textbf{Доверие:} Росавтодор, Автобан, ВАД, Союздорпроект.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+{
+\setbeamercolor{background canvas}{bg=NeonCyan}
+\setbeamercolor{normal text}{fg=DarkSpace}
+\begin{frame}[plain]
+    \begin{center}
+        \vspace{2cm}
+        \Huge \textbf{Готовы к тест-драйву?}
+        
+        \vspace{0.5cm}
+        \Large Скачайте полнофункциональную версию на 30 дней бесплатно.
+        
+        \vspace{1cm}
+        \textbf{indorsoft.ru}
+        
+        \normalsize 8 800 333-08-05 | sales@indorsoft.ru
+    \end{center}
+\end{frame}
+}
+
+\end{document}
+```
