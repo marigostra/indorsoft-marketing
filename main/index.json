@@ -1,4 +1,3 @@
-<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -8,14 +7,14 @@
       "name": "ИндорСофт",
       "alternateName": "IndorSoft",
       "url": "https://indorsoft.ru/",
-      "logo": "https://indorsoft.ru/logo.png",
+      "logo": "https://indorsoft.ru/images/web/IndorSoftLogoTitled.svg",
       "description": "Российская IT-компания, разрабатывающая программные продукты в области САПР и ГИС для проектирования и эксплуатации автомобильных дорог и электросетей.",
       "foundingDate": "2003",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Томск",
         "addressCountry": "RU",
-        "streetAddress": "площадь Кирова"
+        "streetAddress": "пр. Комсомольский, 70"
       },
       "contactPoint": [
         {
@@ -139,4 +138,3 @@
     }
   ]
 }
-</script>
