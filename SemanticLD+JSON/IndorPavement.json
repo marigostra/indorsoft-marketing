@@ -2,29 +2,17 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "IndorPavement",
-  "alternateName": "Индор Пэйвмэнт",
+    "alternateName": "Индор Пэйвмэнт",
+      "description": "Профессиональная система для автоматизированного конструирования и расчёта нежёстких и жёстких дорожных одежд автомобильных дорог общего пользования, городских улиц и аэродромов.",
   "applicationCategory": "EngineeringApplication",
-  "operatingSystem": "Windows 10, Windows 11, Astra Linux Desktop, РЕД ОС",
-  "description": "Профессиональная система для автоматизированного конструирования и расчёта нежёстких и жёстких дорожных одежд автомобильных дорог общего пользования, городских улиц и аэродромов.",
+  "url": "https://indorsoft.ru/products/pavement/",
+  "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
   "softwareVersion": "2026.3.0",
-  "fileSize": "611 MB",
-  "author": {
-    "@type": "Organization",
-    "name": "ИндорСофт",
-    "url": "https://indorsoft.ru",
-    "foundingDate": "2003",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Томск",
-      "addressCountry": "RU"
-    }
-  },
   "offers": {
     "@type": "Offer",
     "price": "19000.00",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://indorsoft.ru/products/pavement/",
     "seller": {
       "@type": "Organization",
       "name": "ИндорСофт"
@@ -40,5 +28,43 @@
   ],
   "requirements": "Архитектура х64, ОЗУ от 4 ГБ, видеоадаптер с поддержкой DirectX 11",
   "isAccessibleForFree": "False",
-  "downloadUrl": "https://indorsoft.ru/download/distribs/IndorPavement/"
+  "downloadUrl": "https://indorsoft.ru/download/files/products/30-IndorPavement/Distrib/IndorPavement-2026.3.0.msi",
+  "fileSize": "611 MB",
+  "availableOnDevice": "Desktop",
+  "countriesSupported": "RU, BY, KZ",
+  "memoryRequirements": "4 GB (минимально), GB Гб (рекомендовано)",
+  "softwareHelp": "http://help.indorsoft.ru/IndorPavement/",
+    "storageRequirements": "?? GB",
+      "author": {
+    "@type": "Organization",
+    "name": "ИндорСофт",
+	  "url": "https://indorsoft.ru",
+	  "logo": "https://indorsoft.ru/images/logo.png",
+	  "foundingDate": "2003",
+	        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Томск",
+        "addressCountry": "RU",
+        "streetAddress": "пр. Комсомольский, 70, офис 5001"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-800-333-08-05",
+          "contactType": "customer service",
+          "areaServed": "RU",
+          "availableLanguage": "ru"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-3822-650-450",
+          "contactType": "office",
+          "email": "info@indorsoft.ru",
+          "areaServed": "RU",
+          "availableLanguage": "ru"
+        }
+      ]
+  },
+
 }
+

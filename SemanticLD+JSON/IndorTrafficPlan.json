@@ -8,31 +8,22 @@
   "operatingSystem": "Windows 10, Windows 11, Astra Linux Desktop, РЕД ОС",
   "softwareRequirements": "Архитектура х64, ОЗУ от 8 Гб, Видеоадаптер с поддержкой DirectX 11",
   "softwareVersion": "2026.3.0",
-  "fileSize": "829 MB",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ИндорСофт (IndorSoft)",
-    "url": "https://indorsoft.ru/",
-    "foundingDate": "2003",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Томск",
-      "addressCountry": "RU"
-    }
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "19000.00",
-    "priceCurrency": "RUB",
-    "description": "Бессрочная лицензия с технической поддержкой и обновлениями на 12 месяцев.",
-    "availability": "https://schema.org/InStock"
-  },
-  "featureList": [
+    "fileSize": "829 MB",
+      "featureList": [
     "Автоматическая расстановка ТСОДД",
     "Работа с дорогой на спрямлённом плане и на топооснове",
     "Встроенный редактор дорожных знаков индивидуального проектирования IndorRoadSign",
     "Искусственный интеллект для видеораспознавания стандартных дорожных знаков",
     "Автоматическое формирование пакета ведомостей и чертежей",
     "Сравнение исходного состояния и проектного решения"
-  ]
+      ],
+   "offers": {
+    "@type": "Offer",
+    "price": "19000.00",
+    "priceCurrency": "RUB",
+    "description": "Бессрочная лицензия с технической поддержкой и обновлениями на 12 месяцев.",
+    "availability": "https://schema.org/InStock"
+   },
+    "author": {
+	  },
 }

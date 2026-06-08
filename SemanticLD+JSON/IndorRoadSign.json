@@ -2,29 +2,14 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "IndorRoadSign",
-  "alternateName": "Индор Роад Сайн",
+    "alternateName": "Индор Роад Сайн",
+      "description": "Профессиональная система для проектирования и подготовки к изготовлению дорожных знаков любой сложности, включая знаки индивидуального проектирования и туристические указатели. Поддерживает актуальные стандарты РФ и стран СНГ.",
   "url": "https://indorsoft.ru/products/roadsign/",
   "applicationCategory": ["DesignApplication", "EngineeringApplication"],
   "operatingSystem": "Windows 10, Windows 11, Astra Linux Desktop, РЕД ОС",
-  "softwareVersion": "2026.3.0",
+    "softwareVersion": "2026.3.0",
+        "softwareRequirements": "Архитектура х64, ОЗУ от 8 Гб, Видеоадаптер с поддержкой DirectX 11, Разрешение экрана от 1280x1024.",
   "fileSize": "600 MB",
-  "description": "Профессиональная система для проектирования и подготовки к изготовлению дорожных знаков любой сложности, включая знаки индивидуального проектирования и туристические указатели. Поддерживает актуальные стандарты РФ и стран СНГ.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "ИндорСофт",
-    "url": "https://indorsoft.ru/",
-    "logo": "https://indorsoft.ru/images/logo.png",
-    "foundingDate": "2003",
-    "description": "Российская IT-компания, разрабатывающая программные продукты в области САПР и ГИС для проектирования и эксплуатации автомобильных дорог."
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "19000.00",
-    "priceCurrency": "RUB",
-    "description": "Лицензия с технической поддержкой и обновлениями на 12 месяцев. Срок пользования не ограничен.",
-    "availability": "https://schema.org/InStock",
-    "url": "https://indorsoft.ru/products/roadsign/"
-  },
   "featureList": [
     "Проектирование по ГОСТ Р 52290–2024 и стандартам СНГ",
     "Конструктор знаков индивидуального проектирования",
@@ -33,5 +18,13 @@
     "Создание макетов для режущего плоттера",
     "Автоматическая генерация чертежей и экспорт в AutoCAD"
   ],
-  "softwareRequirements": "Архитектура х64, ОЗУ от 8 Гб, Видеоадаптер с поддержкой DirectX 11, Разрешение экрана от 1280x1024."
+  "offers": {
+    "@type": "Offer",
+    "price": "19000.00",
+    "priceCurrency": "RUB",
+    "description": "Лицензия с технической поддержкой и обновлениями на 12 месяцев. Срок пользования не ограничен.",
+    "availability": "https://schema.org/InStock",
+  },
+    "author": {
+	  }
 }
