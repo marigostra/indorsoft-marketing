@@ -1,66 +1,105 @@
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "IndorPavement",
-  "alternateName": "Индор Пэйвмэнт",
-  "description": "Профессиональная система для автоматизированного конструирования и расчёта нежёстких и жёстких дорожных одежд автомобильных дорог общего пользования, городских улиц и аэродромов.",
-  "url": "https://indorsoft.ru/products/pavement/",
-  "applicationCategory": "EngineeringApplication",
-  "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
-  "softwareVersion": "2026.3.0",
-  "softwareHelp": "http://help.indorsoft.ru/IndorPavement/",
-  "downloadUrl": "https://indorsoft.ru/download/files/products/30-IndorPavement/Distrib/IndorPavement-2026.3.0.msi",
-  "fileSize": "611 MB",
-  "requirements": "Архитектура х64, ОЗУ от 4 ГБ, видеоадаптер с поддержкой DirectX 11",
-  "isAccessibleForFree": False,
-  "availableOnDevice": "Desktop",
-  "memoryRequirements": "4 GB (минимально), GB (рекомендовано)",
-  "storageRequirements": "?? GB",
-  "featureList": [
-    "Расчёт нежёстких и жёстких дорожных одежд",
-    "Оптимизация конструкции по цене, прочности и толщине",
-    "Библиотека из более 1000 материалов, включая геосинтетику",
-    "Вариантное проектирование и технико-экономический анализ",
-    "Формирование чертежей и подробной отчётной документации",
-    "Поддержка актуальных ГОСТ, ПНСТ, ОДН и СП"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "19000.00",
-    "priceCurrency": "RUB",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-    }
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "ИндорСофт",
-    "url": "https://indorsoft.ru",
-    "logo": "https://indorsoft.ru/images/logo.png",
-    "foundingDate": "2003",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Томск",
-      "addressCountry": "RU",
-      "streetAddress": "пр. Комсомольский, 70, офис 5001"
-    },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-800-333-08-05",
-        "contactType": "customer service",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "IndorPavement",
+      "alternateName": "Индор Пэйвмэнт",
+      "description": "Профессиональная система для автоматизированного конструирования и расчёта нежёстких и жёстких дорожных одежд автомобильных дорог общего пользования, городских улиц и аэродромов.",
+      "url": "https://indorsoft.ru/products/pavement/",
+      "applicationCategory": "EngineeringApplication",
+      "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
+      "softwareVersion": "2026.3.0",
+      "softwareHelp": "http://help.indorsoft.ru/IndorPavement/",
+      "downloadUrl": "https://indorsoft.ru/download/files/products/30-IndorPavement/Distrib/IndorPavement-2026.3.0.msi",
+      "fileSize": "611 MB",
+      "requirements": "Архитектура х64, ОЗУ от 4 ГБ, видеоадаптер с поддержкой DirectX 11",
+      "isAccessibleForFree": false,
+      "availableOnDevice": "Desktop",
+      "memoryRequirements": "4 GB (минимально), GB (рекомендовано)",
+      "storageRequirements": "?? GB",
+      "featureList": [
+        "Расчёт нежёстких и жёстких дорожных одежд",
+        "Оптимизация конструкции по цене, прочности и толщине",
+        "Библиотека из более 1000 материалов, включая геосинтетику",
+        "Вариантное проектирование и технико-экономический анализ",
+        "Формирование чертежей и подробной отчётной документации",
+        "Поддержка актуальных ГОСТ, ПНСТ, ОДН и СП"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "19000.00",
+        "priceCurrency": "RUB",
+        "availability": "https://schema.org/InStock",
+        "seller": {}
       },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-3822-650-450",
-        "contactType": "office",
-        "email": "info@indorsoft.ru",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+      "author": {
+        "@type": "Organization",
+        "name": "ИндорСофт",
+        "url": "https://indorsoft.ru",
+        "logo": "https://indorsoft.ru/images/logo.png",
+        "foundingDate": "2003",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Томск",
+          "addressCountry": "RU",
+          "streetAddress": "пр. Комсомольский, 70, офис 5001"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-800-333-08-05",
+            "contactType": "customer service",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-3822-650-450",
+            "contactType": "office",
+            "email": "info@indorsoft.ru",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Для чего предназначена программа IndorPavement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IndorPavement — это профессиональная система для автоматизированного конструирования и расчёта нежёстких и жёстких дорожных одежд автомобильных дорог общего пользования, городских улиц и аэродромов."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие операционные системы поддерживает IndorPavement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Программа поддерживает Windows 10 (версия 1709 или выше), Windows 11, а также отечественные ОС: Astra Linux Desktop (версия 1.7 или выше) и РЕД ОС «Рабочая станция» (версия 8)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Каковы минимальные системные требования для установки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для комфортной работы требуется ПК с архитектурой х64, оперативной памятью от 4 ГБ и видеоадаптером с поддержкой DirectX 11."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли использовать IndorPavement бесплатно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет, программа предоставляется на коммерческой основе. Стоимость лицензии составляет от 19 000 рублей."
+          }
+        }
+      ]
+    }
+  ]
 }
-

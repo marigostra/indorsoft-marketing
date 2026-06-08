@@ -1,59 +1,102 @@
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "IndorRoadSign",
-    "alternateName": "Индор Роад Сайн",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "IndorRoadSign",
+      "alternateName": "Индор Роад Сайн",
       "description": "Профессиональная система для проектирования и подготовки к изготовлению дорожных знаков любой сложности, включая знаки индивидуального проектирования и туристические указатели. Поддерживает актуальные стандарты РФ и стран СНГ.",
-  "url": "https://indorsoft.ru/products/roadsign/",
-  "applicationCategory": ["DesignApplication", "EngineeringApplication"],
-  "operatingSystem": "Windows 10, Windows 11, Astra Linux Desktop, РЕД ОС",
-    "softwareVersion": "2026.3.0",
-        "softwareRequirements": "Архитектура х64, ОЗУ от 8 Гб, Видеоадаптер с поддержкой DirectX 11, Разрешение экрана от 1280x1024.",
-  "fileSize": "600 MB",
-  "featureList": [
-    "Проектирование по ГОСТ Р 52290–2024 и стандартам СНГ",
-    "Конструктор знаков индивидуального проектирования",
-    "Проектирование туристических указателей",
-    "Автоматическая расстановка размеров",
-    "Создание макетов для режущего плоттера",
-    "Автоматическая генерация чертежей и экспорт в AutoCAD"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "19000.00",
-    "priceCurrency": "RUB",
-    "description": "Лицензия с технической поддержкой и обновлениями на 12 месяцев. Срок пользования не ограничен.",
-    "availability": "https://schema.org/InStock",
-  },
-    "author": {
-	    "@type": "Organization",
-    "name": "ИндорСофт",
-    "url": "https://indorsoft.ru",
-    "logo": "https://indorsoft.ru/images/logo.png",
-    "foundingDate": "2003",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Томск",
-      "addressCountry": "RU",
-      "streetAddress": "пр. Комсомольский, 70, офис 5001"
-    },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-800-333-08-05",
-        "contactType": "customer service",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+      "url": "https://indorsoft.ru/products/roadsign/",
+      "applicationCategory": [
+        "DesignApplication",
+        "EngineeringApplication"
+      ],
+      "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
+      "softwareVersion": "2026.3.0",
+      "softwareRequirements": "Архитектура х64, ОЗУ от 8 Гб, Видеоадаптер с поддержкой DirectX 11, Разрешение экрана от 1280x1024.",
+      "fileSize": "600 MB",
+      "featureList": [
+        "Проектирование по ГОСТ Р 52290–2024 и стандартам СНГ",
+        "Конструктор знаков индивидуального проектирования",
+        "Проектирование туристических указателей",
+        "Автоматическая расстановка размеров",
+        "Создание макетов для режущего плоттера",
+        "Автоматическая генерация чертежей и экспорт в AutoCAD"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "19000.00",
+        "priceCurrency": "RUB",
+        "description": "Лицензия с технической поддержкой и обновлениями на 12 месяцев. Срок пользования не ограничен.",
+        "availability": "https://schema.org/InStock"
       },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-3822-650-450",
-        "contactType": "office",
-        "email": "info@indorsoft.ru",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+      "author": {
+        "@type": "Organization",
+        "name": "ИндорСофт",
+        "url": "https://indorsoft.ru",
+        "logo": "https://indorsoft.ru/images/logo.png",
+        "foundingDate": "2003",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Томск",
+          "addressCountry": "RU",
+          "streetAddress": "пр. Комсомольский, 70, офис 5001"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-800-333-08-05",
+            "contactType": "customer service",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-3822-650-450",
+            "contactType": "office",
+            "email": "info@indorsoft.ru",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          }
+        ]
       }
-    ]
-
-	  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Для чего предназначена программа IndorRoadSign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это профессиональная система для проектирования и подготовки к изготовлению дорожных знаков любой сложности, включая знаки индивидуального проектирования и туристические указатели по стандартам РФ и СНГ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие операционные системы поддерживаются?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Программа совместима с Windows 10, Windows 11, Astra Linux Desktop и РЕД ОС."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит лицензия и что в неё входит?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стоимость составляет 19000.00 RUB. В цену включена бессрочная лицензия, а также техническая поддержка и обновления в течение 12 месяцев."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие системные требования у программы?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Необходим ПК с архитектурой х64, оперативной памятью от 8 Гб, видеоадаптером с поддержкой DirectX 11 и разрешением экрана от 1280x1024."
+          }
+        }
+      ]
+    }
+  ]
 }

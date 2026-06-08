@@ -1,64 +1,105 @@
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "IndorCAD Road",
-  "alternateName": "ИндорКАД Роад",
-  "applicationCategory": "DesignApplication",
-  "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
-  "description": "Профессиональная САПР для проектирования автомобильных дорог. Реализует концепцию информационного моделирования (BIM/ТИМ). Позволяет создавать параметризированные 3D-модели рельефа, трасс, транспортных узлов, дорожной одежды и искусственных сооружений с автоматическим контролем соблюдения ГОСТ и СНиП.",
-  "softwareVersion": "2026.3.0",
-    "url": "https://indorsoft.ru/products/cad/road/",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "IndorCAD Road",
+      "alternateName": "ИндорКАД Роад",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Windows 10 (версия 1709 или выше), Windows 11, Astra Linux Desktop (версия 1.7 или выше), РЕД ОС «Рабочая станция» (версия 8)",
+      "description": "Профессиональная САПР для проектирования автомобильных дорог. Реализует концепцию информационного моделирования (BIM/ТИМ). Позволяет создавать параметризированные 3D-модели рельефа, трасс, транспортных узлов, дорожной одежды и искусственных сооружений с автоматическим контролем соблюдения ГОСТ и СНиП.",
+      "softwareVersion": "2026.3.0",
+      "url": "https://indorsoft.ru/products/cad/road/",
       "softwareHelp": "http://help.indorsoft.ru/IndorCADRoad/",
       "availableOnDevice": "Desktop",
-  "downloadUrl": "https://indorsoft.ru/download/files/products/10-IndorCAD/Distrib/IndorCAD-2026.3.0.msi",
-  "fileSize": "809 MB",
-  "memoryRequirements": "8 GB (минимально), 16 GB (рекомендовано)",
-  "storageRequirements": "?? GB SSD",
-    "isAccessibleForFree": false,
+      "downloadUrl": "https://indorsoft.ru/download/files/products/10-IndorCAD/Distrib/IndorCAD-2026.3.0.msi",
+      "fileSize": "809 MB",
+      "memoryRequirements": "8 GB (минимально), 16 GB (рекомендовано)",
+      "storageRequirements": "?? GB SSD",
+      "isAccessibleForFree": false,
       "featureList": [
-    "Информационное моделирование (BIM/ТИМ) автомобильных дорог",
-    "Обработка данных лазерного сканирования и облаков точек (LAS, TXT, CSV)",
-    "Параметризированное моделирование слоёв земляного полотна и дорожной одежды",
-    "Проектирование транспортных узлов и водопропускных труб",
-    "Проектирование инженерного обустройства (знаки, разметка, ограждения, освещение)",
-    "Экспорт и импорт IFC, LandXML, DWG",
-    "Автоматизированный контроль соблюдения норм и оценка видимости/водоотвода"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "19000.00",
-    "priceCurrency": "RUB",
-    "description": "Бессрочная лицензия с обновлениями и технической поддержкой на 12 месяцев.",
-    "availability": "https://schema.org/InStock"
-  },
-    "author": {
-	    "@type": "Organization",
-    "name": "ИндорСофт",
-    "url": "https://indorsoft.ru",
-    "logo": "https://indorsoft.ru/images/logo.png",
-    "foundingDate": "2003",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Томск",
-      "addressCountry": "RU",
-      "streetAddress": "пр. Комсомольский, 70, офис 5001"
-    },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-800-333-08-05",
-        "contactType": "customer service",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+        "Информационное моделирование (BIM/ТИМ) автомобильных дорог",
+        "Обработка данных лазерного сканирования и облаков точек (LAS, TXT, CSV)",
+        "Параметризированное моделирование слоёв земляного полотна и дорожной одежды",
+        "Проектирование транспортных узлов и водопропускных труб",
+        "Проектирование инженерного обустройства (знаки, разметка, ограждения, освещение)",
+        "Экспорт и импорт IFC, LandXML, DWG",
+        "Автоматизированный контроль соблюдения норм и оценка видимости/водоотвода"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "19000.00",
+        "priceCurrency": "RUB",
+        "description": "Бессрочная лицензия с обновлениями и технической поддержкой на 12 месяцев.",
+        "availability": "https://schema.org/InStock"
       },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+7-3822-650-450",
-        "contactType": "office",
-        "email": "info@indorsoft.ru",
-        "areaServed": "RU",
-        "availableLanguage": "ru"
+      "author": {
+        "@type": "Organization",
+        "name": "ИндорСофт",
+        "url": "https://indorsoft.ru",
+        "logo": "https://indorsoft.ru/images/logo.png",
+        "foundingDate": "2003",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Томск",
+          "addressCountry": "RU",
+          "streetAddress": "пр. Комсомольский, 70, офис 5001"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-800-333-08-05",
+            "contactType": "customer service",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+7-3822-650-450",
+            "contactType": "office",
+            "email": "info@indorsoft.ru",
+            "areaServed": "RU",
+            "availableLanguage": "ru"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое IndorCAD Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IndorCAD Road — это профессиональная система автоматизированного проектирования (САПР) для автомобильных дорог, поддерживающая технологии информационного моделирования (BIM/ТИМ)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "На каких операционных системах работает программа?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Программа поддерживает Windows 10 (версия 1709 и выше), Windows 11, а также отечественные ОС: Astra Linux Desktop (от версии 1.7) и РЕД ОС «Рабочая станция» (версия 8)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие системные требования к оперативной памяти?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для работы требуется минимум 8 ГБ оперативной памяти, однако для комфортного проектирования рекомендуется 16 ГБ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что входит в стоимость лицензии?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В стоимость (19 000 рублей) входит бессрочная лицензия на использование ПО, а также получение обновлений и технической поддержки в течение 12 месяцев."
+          }
+        }
+      ]
+    }
+  ]
 }
