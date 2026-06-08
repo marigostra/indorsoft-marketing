@@ -1,0 +1,195 @@
+Вот требуемые материалы для продукта **IndorTrafficPlan**. 
+
+### 1. Развёрнутое описание в формате JSON-LD
+Этот код готов для вставки в секцию `<head>` вашей веб-страницы. Он использует схему `SoftwareApplication`, что идеально подходит для SEO-продвижения IT-продукта.
+
+```json
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "IndorTrafficPlan",
+  "alternateName": "Индор Трафик План",
+  "applicationCategory": "EngineeringApplication, DesignApplication",
+  "operatingSystem": "Windows 10, Windows 11, Astra Linux Desktop, РЕД ОС",
+  "description": "Профессиональная система для автоматизированного проектирования организации дорожного движения (ПОДД). Включает инструменты для создания схем дорог, расстановки ТСОДД, формирования динамических чертежей и ведомостей по Приказу Минтранса № 49. Встроенный ИИ для распознавания знаков по видео.",
+  "softwareVersion": "2026.3.0",
+  "fileSize": "829 MB",
+  "url": "https://indorsoft.ru/products/trafficplan/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ИндорСофт (IndorSoft)",
+    "foundingDate": "2003",
+    "url": "https://indorsoft.ru/",
+    "logo": "https://indorsoft.ru/images/logo.png"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "19000.00",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "description": "Лицензия с технической поддержкой и обновлениями на 12 месяцев."
+  },
+  "featureList": [
+    "Автоматическая расстановка технических средств организации дорожного движения (ТСОДД)",
+    "Анализ текущей ситуации и поиск объектов к переносу",
+    "Вычисление участков необеспеченной видимости",
+    "Работа с дорогой на спрямлённом плане и на топооснове (интернет-карты, аэрофотосъёмка, dwg)",
+    "Встроенный редактор знаков индивидуального проектирования IndorRoadSign",
+    "Формирование всех спецификаций по Приказу № 49 Минтранса РФ",
+    "Импорт данных из дорожных лабораторий и GPS-треков"
+  ],
+  "requirements": "Процессор х64, ОЗУ от 8 Гб (рекомендовано 16 Гб), видеокарта с поддержкой DirectX 11."
+}
+</script>
+```
+
+### 2. Стильная презентация в LaTeX (Beamer)
+Код ниже компилируется через `pdflatex`. Я создал кастомный дизайн в стиле **Linear Dark Mode** (глубокий тёмный фон, строгие неоново-голубые линии, рубленый шрифт без засечек). Текст адаптирован под драйвовую маркетинговую подачу.
+
+```latex
+\documentclass[aspectratio=169]{beamer}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{tikz}
+
+% --- Настройка цветов (Linear Dark Style) ---
+\definecolor{BgDark}{HTML}{121212} % Глубокий темный
+\definecolor{BgLighter}{HTML}{1E1E1E} % Чуть светлее для акцентов
+\definecolor{LinearCyan}{HTML}{00E5FF} % Драйвовый голубой акцент
+\definecolor{TextWhite}{HTML}{F5F5F5} % Основной текст
+\definecolor{TextGray}{HTML}{B0B0B0} % Второстепенный текст
+
+% --- Применение цветов к Beamer ---
+\setbeamercolor{background canvas}{bg=BgDark}
+\setbeamercolor{normal text}{fg=TextWhite}
+\setbeamercolor{frametitle}{fg=LinearCyan}
+\setbeamercolor{itemize item}{fg=LinearCyan}
+\setbeamercolor{itemize subitem}{fg=TextGray}
+
+% --- Убираем лишнее ---
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+% --- Кастомный заголовок слайда (Linear Style) ---
+\setbeamertemplate{frametitle}{
+    \vspace{0.5cm}
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[LinearCyan, thick] (-0.5, -0.3) -- (2.5, -0.3);
+        \draw[LinearCyan, thick] (-0.5, -0.3) -- (-0.5, 0.5);
+    \end{tikzpicture}
+    \vspace{-0.5cm}
+    \Large\bfseries\insertframetitle\par
+    \vspace{0.3cm}
+}
+
+\begin{document}
+
+% --- ТИТУЛЬНЫЙ СЛАЙД ---
+\begin{frame}
+    \begin{tikzpicture}[remember picture,overlay]
+        % Линейный графический акцент
+        \draw[LinearCyan, line width=2pt] (current page.south west) ++(1,1) -- ++(0, 5) -- ++(4, 0);
+        \draw[LinearCyan, line width=1pt, opacity=0.5] (current page.south west) ++(1.2,0.8) -- ++(0, 4.8) -- ++(3.8, 0);
+    \end{tikzpicture}
+    
+    \vspace{2cm}
+    \hspace{1.5cm}
+    \begin{minipage}{0.8\textwidth}
+        {\color{LinearCyan}\Huge \textbf{IndorTrafficPlan}}\\[0.5cm]
+        {\color{TextWhite}\Large Проектирование ОДД на максималках}\\[0.3cm]
+        {\color{TextGray}\small Цифровые решения для дорожного хозяйства от ИндорСофт}
+    \end{minipage}
+\end{frame}
+
+% --- СЛАЙД 2: ПРОБЛЕМАТИКА И РЕШЕНИЕ ---
+\begin{frame}{Хватит тратить часы на рутину}
+    \Large
+    Создание ПОДД не должно быть болью. 
+    \vspace{0.5cm}
+    
+    \normalsize
+    \textbf{IndorTrafficPlan} — это система, где ИИ и автоматизация работают за инженера. От исходного состояния до проектного решения — в единой цифровой среде.
+    
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item Автоматическая расстановка ТСОДД.
+        \item Мгновенное вычисление участков необеспеченной видимости.
+        \item Сравнение «было/стало» в один клик.
+    \end{itemize}
+\end{frame}
+
+% --- СЛАЙД 3: КИЛЛЕР-ФИЧИ ---
+\begin{frame}{Драйв в каждом инструменте}
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+            {\color{LinearCyan}\large \textbf{01. Искусственный интеллект}}
+            \vspace{0.2cm}\\
+            \small Нейросети автоматически распознают стандартные дорожные знаки по видео. Меньше ручного ввода — больше точности.
+            \vspace{0.5cm}\\
+            {\color{LinearCyan}\large \textbf{02. Динамические чертежи}}
+            \vspace{0.2cm}\\
+            \small Разбивка на листы, спрямлённый план и топооснова. Настроил один раз — система сама перестроит чертёж при изменениях.
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            {\color{LinearCyan}\large \textbf{03. Индивидуальные знаки}}
+            \vspace{0.2cm}\\
+            \small Встроенный редактор \textit{IndorRoadSign}. Проектируйте знаки любой сложности по ГОСТам РФ и СНГ.
+            \vspace{0.5cm}\\
+            {\color{LinearCyan}\large \textbf{04. Генерация ведомостей}}
+            \vspace{0.2cm}\\
+            \small Пакет спецификаций по Приказу № 49 Минтранса РФ формируется одной командой.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% --- СЛАЙД 4: ИНТЕГРАЦИЯ ---
+\begin{frame}{Бесшовная экосистема}
+    \large
+    Проект не живёт в вакууме. IndorTrafficPlan легко общается с внешним миром:
+    
+    \vspace{0.5cm}
+    \normalsize
+    \begin{itemize}
+        \item \textbf{Вход:} Импорт из дорожных лабораторий (RDT Line, НПО Регион), GPS-треки, таблицы, данные из IndorCAD.
+        \item \textbf{Подложки:} Интернет-карты, аэрофотосъёмка, DWG с координатной привязкой.
+        \item \textbf{Выход:} Экспорт проектного решения напрямую в ГИС IndorRoad для дальнейшей эксплуатации.
+    \end{itemize}
+\end{frame}
+
+% --- СЛАЙД 5: О КОМПАНИИ ---
+\begin{frame}{Кто за этим стоит?}
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw[LinearCyan, thick] (current page.north east) ++(-3,-1) -- ++(2,0) -- ++(0,-2);
+    \end{tikzpicture}
+    
+    {\color{LinearCyan}\Large \textbf{ИндорСофт}} — 20+ лет в дорожной отрасли.
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item \textbf{Масштаб:} Более 300 000 км дорог в РФ и за рубежом проектируется и эксплуатируется на нашем ПО.
+        \item \textbf{Импортозамещение:} 100\% в Реестре российского ПО. Поддержка Astra Linux и РЕД ОС.
+        \item \textbf{Поддержка:} Мощное комьюнити, онлайн-курсы, форум и прямая связь с разработчиками.
+    \end{itemize}
+\end{frame}
+
+% --- СЛАЙД 6: CALL TO ACTION ---
+\begin{frame}
+    \begin{center}
+        \vspace{1.5cm}
+        {\color{LinearCyan}\Huge \textbf{Готовы ускориться?}}\\[0.8cm]
+        {\large Скачайте полнофункциональную версию на 30 дней бесплатно.}\\[1cm]
+        
+        \begin{tikzpicture}
+            \node[draw=LinearCyan, thick, text=TextWhite, inner sep=0.4cm] (btn) {\textbf{indorsoft.ru/products/trafficplan}};
+        \end{tikzpicture}\\[1cm]
+        
+        {\color{TextGray}\small 8 800 333-08-05 \quad | \quad info@indorsoft.ru}
+    \end{center}
+\end{frame}
+
+\end{document}
+```
