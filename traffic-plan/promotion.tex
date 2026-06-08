@@ -1,143 +1,165 @@
 \documentclass[aspectratio=169]{beamer}
+
+% Поддержка русского языка и шрифтов
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{lmodern}
 \usepackage{tikz}
 
-% --- Настройка цветов (Linear Dark Style) ---
-\definecolor{BgDark}{HTML}{121212} % Глубокий темный
-\definecolor{BgLighter}{HTML}{1E1E1E} % Чуть светлее для акцентов
-\definecolor{LinearCyan}{HTML}{00E5FF} % Драйвовый голубой акцент
-\definecolor{TextWhite}{HTML}{F5F5F5} % Основной текст
-\definecolor{TextGray}{HTML}{B0B0B0} % Второстепенный текст
+% Настройка стильной пастельной палитры
+\definecolor{BgPastel}{HTML}{F4F1DE}       % Мягкий кремовый фон (не белый)
+\definecolor{TextMain}{HTML}{2B2D42}       % Глубокий тёмно-синий/графитовый для контраста
+\definecolor{AccentDrive}{HTML}{E07A5F}    % Драйвовый пастельный терракотовый
+\definecolor{AccentTech}{HTML}{3D405B}     % Строгий пастельный индиго
+\definecolor{AccentFresh}{HTML}{81B29A}    % Свежий пастельный мятный
+\definecolor{AccentLight}{HTML}{F2CC8F}    % Мягкий жёлтый для выделений
 
-% --- Применение цветов к Beamer ---
-\setbeamercolor{background canvas}{bg=BgDark}
-\setbeamercolor{normal text}{fg=TextWhite}
-\setbeamercolor{frametitle}{fg=LinearCyan}
-\setbeamercolor{itemize item}{fg=LinearCyan}
-\setbeamercolor{itemize subitem}{fg=TextGray}
+% Настройка темы Beamer
+\setbeamercolor{background canvas}{bg=BgPastel}
+\setbeamercolor{normal text}{fg=TextMain}
+\setbeamercolor{frametitle}{fg=AccentDrive}
+\setbeamercolor{itemize item}{fg=AccentFresh}
+\setbeamercolor{itemize subitem}{fg=AccentDrive}
 
-% --- Убираем лишнее ---
+% Убираем навигационные символы для чистоты дизайна
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
 
-% --- Кастомный заголовок слайда (Linear Style) ---
+% Настройка заголовков слайдов
 \setbeamertemplate{frametitle}{
     \vspace{0.5cm}
-    \begin{tikzpicture}[remember picture,overlay]
-        \draw[LinearCyan, thick] (-0.5, -0.3) -- (2.5, -0.3);
-        \draw[LinearCyan, thick] (-0.5, -0.3) -- (-0.5, 0.5);
-    \end{tikzpicture}
-    \vspace{-0.5cm}
-    \Large\bfseries\insertframetitle\par
-    \vspace{0.3cm}
+    \textbf{\Large\insertframetitle}
 }
+
+% Кастомная команда для стильного выделения текста
+\newcommand{\hl}[1]{\textcolor{AccentDrive}{\textbf{#1}}}
+\newcommand{\tech}[1]{\textcolor{AccentFresh}{\textbf{#1}}}
 
 \begin{document}
 
-% --- ТИТУЛЬНЫЙ СЛАЙД ---
+% ================= СЛАЙД 1: ТИТУЛЬНЫЙ =================
 \begin{frame}
     \begin{tikzpicture}[remember picture,overlay]
-        % Линейный графический акцент
-        \draw[LinearCyan, line width=2pt] (current page.south west) ++(1,1) -- ++(0, 5) -- ++(4, 0);
-        \draw[LinearCyan, line width=1pt, opacity=0.5] (current page.south west) ++(1.2,0.8) -- ++(0, 4.8) -- ++(3.8, 0);
+        % Декоративные элементы
+        \fill[AccentTech] (current page.south west) rectangle ([xshift=4cm,yshift=10cm]current page.south west);
+        \fill[AccentDrive] (current page.north east) circle (2.5cm);
+        \fill[AccentFresh] (current page.south east) circle (1.5cm);
     \end{tikzpicture}
     
-    \vspace{2cm}
-    \hspace{1.5cm}
-    \begin{minipage}{0.8\textwidth}
-        {\color{LinearCyan}\Huge \textbf{IndorTrafficPlan}}\\[0.5cm]
-        {\color{TextWhite}\Large Проектирование ОДД на максималках}\\[0.3cm]
-        {\color{TextGray}\small Цифровые решения для дорожного хозяйства от ИндорСофт}
+    \vspace{1cm}
+    \hspace{3.5cm}
+    \begin{minipage}{0.65\textwidth}
+        \textcolor{AccentDrive}{\Huge \textbf{IndorTrafficPlan}} \\[0.5em]
+        \textcolor{TextMain}{\Large Проектирование организации \\ дорожного движения на максималках} \\[1em]
+        \textcolor{AccentTech}{\rule{5cm}{2pt}} \\[1em]
+        \textbf{ИндорСофт} | Цифровые решения для дорог
     \end{minipage}
 \end{frame}
 
-% --- СЛАЙД 2: ПРОБЛЕМАТИКА И РЕШЕНИЕ ---
-\begin{frame}{Хватит тратить часы на рутину}
+% ================= СЛАЙД 2: БОЛЬ И РЕШЕНИЕ =================
+\begin{frame}{От рутины к чистому инжинирингу}
     \Large
-    Создание ПОДД не должно быть болью. 
-    \vspace{0.5cm}
+    Создание ПОДД — это сотни знаков, километры разметки и ГОСТы. \\
+    Мы сделали так, чтобы \hl{система работала за вас}.
     
+    \vspace{0.8cm}
     \normalsize
-    \textbf{IndorTrafficPlan} — это система, где ИИ и автоматизация работают за инженера. От исходного состояния до проектного решения — в единой цифровой среде.
-    
-    \vspace{0.5cm}
     \begin{itemize}
-        \item Автоматическая расстановка ТСОДД.
-        \item Мгновенное вычисление участков необеспеченной видимости.
-        \item Сравнение «было/стало» в один клик.
+        \item \tech{Автоматизация:} Расстановка ТСОДД в пару кликов.
+        \item \tech{Два состояния:} Исходное vs Проектное решение — наглядно.
+        \item \tech{Умный анализ:} Поиск объектов к переносу и расчет зон видимости.
+        \item \tech{Топооснова:} Работа на интернет-картах, DWG и аэрофотосъемке.
     \end{itemize}
 \end{frame}
 
-% --- СЛАЙД 3: КИЛЛЕР-ФИЧИ ---
-\begin{frame}{Драйв в каждом инструменте}
-    \begin{columns}[T]
-        \begin{column}{0.45\textwidth}
-            {\color{LinearCyan}\large \textbf{01. Искусственный интеллект}}
-            \vspace{0.2cm}\\
-            \small Нейросети автоматически распознают стандартные дорожные знаки по видео. Меньше ручного ввода — больше точности.
-            \vspace{0.5cm}\\
-            {\color{LinearCyan}\large \textbf{02. Динамические чертежи}}
-            \vspace{0.2cm}\\
-            \small Разбивка на листы, спрямлённый план и топооснова. Настроил один раз — система сама перестроит чертёж при изменениях.
+% ================= СЛАЙД 3: ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ =================
+\begin{frame}{ИИ работает, инженер контролирует}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \vspace{0.5cm}
+            \Large \hl{Нейросети в деле}
+            \vspace{0.5cm}
+            \normalsize
+            
+            Загружаете видео с видеорегистратора? 
+            IndorTrafficPlan \tech{автоматически распознает} стандартные дорожные знаки.
+            
+            \vspace{0.5cm}
+            Меньше ручного ввода — больше времени на принятие проектных решений.
         \end{column}
-        \begin{column}{0.45\textwidth}
-            {\color{LinearCyan}\large \textbf{03. Индивидуальные знаки}}
-            \vspace{0.2cm}\\
-            \small Встроенный редактор \textit{IndorRoadSign}. Проектируйте знаки любой сложности по ГОСТам РФ и СНГ.
-            \vspace{0.5cm}\\
-            {\color{LinearCyan}\large \textbf{04. Генерация ведомостей}}
-            \vspace{0.2cm}\\
-            \small Пакет спецификаций по Приказу № 49 Минтранса РФ формируется одной командой.
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{tikzpicture}
+                    \fill[AccentLight, rounded corners=10pt] (0,0) rectangle (5,4);
+                    \node[TextMain, align=center] at (2.5,2) {\textbf{Распознавание} \\ \textbf{по видео} \\ \vspace{0.2cm} \\ \Large };
+                \end{tikzpicture}
+            \end{center}
         \end{column}
     \end{columns}
 \end{frame}
 
-% --- СЛАЙД 4: ИНТЕГРАЦИЯ ---
-\begin{frame}{Бесшовная экосистема}
-    \large
-    Проект не живёт в вакууме. IndorTrafficPlan легко общается с внешним миром:
+% ================= СЛАЙД 4: ДОКУМЕНТАЦИЯ БЕЗ БОЛИ =================
+\begin{frame}{ГОСТы и Приказы — под капотом}
+    \Large
+    Никакой ручной верстки таблиц. Мастер формирования документации делает всё сам.
     
-    \vspace{0.5cm}
+    \vspace{0.8cm}
     \normalsize
     \begin{itemize}
-        \item \textbf{Вход:} Импорт из дорожных лабораторий (RDT Line, НПО Регион), GPS-треки, таблицы, данные из IndorCAD.
-        \item \textbf{Подложки:} Интернет-карты, аэрофотосъёмка, DWG с координатной привязкой.
-        \item \textbf{Выход:} Экспорт проектного решения напрямую в ГИС IndorRoad для дальнейшей эксплуатации.
+        \item \hl{Приказ Минтранса РФ № 49:} Все спецификации уже настроены.
+        \item \hl{Динамические чертежи:} Меняете проект — чертеж обновляется сам.
+        \item \hl{IndorRoadSign:} Встроенный редактор для знаков индивидуального проектирования.
+        \item \hl{Экспорт:} Бесшовная передача данных в ГИС IndorRoad и IndorCAD.
     \end{itemize}
 \end{frame}
 
-% --- СЛАЙД 5: О КОМПАНИИ ---
-\begin{frame}{Кто за этим стоит?}
-    \begin{tikzpicture}[remember picture,overlay]
-        \draw[LinearCyan, thick] (current page.north east) ++(-3,-1) -- ++(2,0) -- ++(0,-2);
-    \end{tikzpicture}
+% ================= СЛАЙД 5: О КОМПАНИИ =================
+\begin{frame}{ИндорСофт: 20+ лет в дорожной отрасли}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \Huge \hl{4000+} \\
+                \normalsize запусков ПО ежедневно
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \Huge \tech{300к} \\
+                \normalsize километров дорог
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \Huge \hl{100+} \\
+                \normalsize крутых специалистов
+            \end{center}
+        \end{column}
+    \end{columns}
     
-    {\color{LinearCyan}\Large \textbf{ИндорСофт}} — 20+ лет в дорожной отрасли.
-    \vspace{0.5cm}
-    
-    \begin{itemize}
-        \item \textbf{Масштаб:} Более 300 000 км дорог в РФ и за рубежом проектируется и эксплуатируется на нашем ПО.
-        \item \textbf{Импортозамещение:} 100\% в Реестре российского ПО. Поддержка Astra Linux и РЕД ОС.
-        \item \textbf{Поддержка:} Мощное комьюнити, онлайн-курсы, форум и прямая связь с разработчиками.
-    \end{itemize}
+    \vspace{1cm}
+    \begin{center}
+        \normalsize Наш софт используют: РОСАВТОДОР, РОСДОРНИИ, АО ВАД и другие лидеры рынка. \\
+        \tech{Всё ПО включено в Реестр российского программного обеспечения.}
+    \end{center}
 \end{frame}
 
-% --- СЛАЙД 6: CALL TO ACTION ---
+% ================= СЛАЙД 6: CALL TO ACTION =================
 \begin{frame}
     \begin{center}
-        \vspace{1.5cm}
-        {\color{LinearCyan}\Huge \textbf{Готовы ускориться?}}\\[0.8cm]
-        {\large Скачайте полнофункциональную версию на 30 дней бесплатно.}\\[1cm]
+        \Huge \hl{Готовы ускорить проектирование?}
         
+        \vspace{1cm}
+        \Large \textbf{19 000 р.} \\
+        \normalsize Бессрочная лицензия + год обновлений и техподдержки
+        
+        \vspace{1cm}
         \begin{tikzpicture}
-            \node[draw=LinearCyan, thick, text=TextWhite, inner sep=0.4cm] (btn) {\textbf{indorsoft.ru/products/trafficplan}};
-        \end{tikzpicture}\\[1cm]
+            \fill[AccentFresh, rounded corners=5pt] (0,0) rectangle (6,1.2);
+            \node[BgPastel] at (3,0.6) {\textbf{Скачать пробную версию на 30 дней}};
+        \end{tikzpicture}
         
-        {\color{TextGray}\small 8 800 333-08-05 \quad | \quad info@indorsoft.ru}
+        \vspace{0.8cm}
+        \normalsize \tech{indorsoft.ru} \quad | \quad 8 800 333-08-05 \quad | \quad sales@indorsoft.ru
     \end{center}
 \end{frame}
 

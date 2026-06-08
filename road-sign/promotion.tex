@@ -1,0 +1,174 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Поддержка русского языка и шрифтов
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Пакеты для графики и скруглённых блоков
+\usepackage{tikz}
+\usepackage[many]{tcolorbox}
+
+% Настройка цветовой палитры (различные варианты синего)
+\definecolor{BgDark}{HTML}{0B132B}       % Глубокий тёмно-синий фон
+\definecolor{BgPanel}{HTML}{1C2541}      % Синий для панелей
+\definecolor{AccentCyan}{HTML}{00E5FF}   % Неоновый голубой для акцентов
+\definecolor{AccentBlue}{HTML}{3A506B}   % Приглушенный синий для рамок
+\definecolor{TextWhite}{HTML}{F0F6FC}    % Белый с легким синим оттенком для текста
+\definecolor{TextHighlight}{HTML}{5BC0BE} % Морская волна для выделения текста
+
+% Настройки Beamer
+\setbeamercolor{background canvas}{bg=BgDark}
+\setbeamercolor{normal text}{fg=TextWhite}
+\setbeamercolor{frametitle}{fg=AccentCyan}
+\setbeamercolor{itemize item}{fg=AccentCyan}
+\setbeamercolor{itemize subitem}{fg=TextHighlight}
+
+% Отключение стандартных элементов навигации
+\setbeamertemplate{navigation symbols}{}
+
+% Настройка заголовков слайдов
+\setbeamertemplate{frametitle}{
+    \vspace{0.5cm}
+    \textbf{\Large\insertframetitle}
+}
+
+% Создание пользовательского блока со скруглёнными углами (без острых углов)
+\newtcolorbox{roundbox}[1][]{
+    enhanced,
+    colback=BgPanel,
+    colframe=AccentBlue,
+    arc=5mm, % Скруглённые углы
+    boxrule=1.5pt,
+    coltitle=AccentCyan,
+    fonttitle=\bfseries\large,
+    title=#1,
+    drop shadow=black!50!BgDark,
+    left=6mm, right=6mm, top=4mm, bottom=4mm,
+    toptitle=3mm, bottomtitle=3mm
+}
+
+% Создание блока без заголовка
+\newtcolorbox{simplebox}{
+    enhanced,
+    colback=BgPanel,
+    colframe=AccentBlue,
+    arc=5mm,
+    boxrule=1.5pt,
+    drop shadow=black!50!BgDark,
+    left=6mm, right=6mm, top=4mm, bottom=4mm
+}
+
+\begin{document}
+
+% Титульный слайд
+\begin{frame}
+    \begin{center}
+        \vspace{1cm}
+        \begin{roundbox}
+            \begin{center}
+                \vspace{0.5cm}
+                {\Huge \textcolor{AccentCyan}{\textbf{IndorRoadSign}}}\\[0.5cm]
+                {\Large Проектирование дорожных знаков будущего}\\[0.5cm]
+                \textcolor{TextHighlight}{Скорость. Точность. Стандарты.}
+                \vspace{0.5cm}
+            \end{center}
+        \end{roundbox}
+        \vspace{1cm}
+        {\small Разработано компанией \textcolor{AccentCyan}{ИндорСофт}}
+    \end{center}
+\end{frame}
+
+% Слайд 2: О компании
+\begin{frame}{Кто мы: ИндорСофт}
+    \begin{roundbox}[Лидеры цифровизации дорожной отрасли]
+        \begin{itemize}
+            \item Более \textcolor{AccentCyan}{\textbf{20 лет}} на рынке разработки САПР и ГИС.
+            \item \textcolor{AccentCyan}{\textbf{300 000 км}} дорог проектируются и эксплуатируются с нашим ПО.
+            \item Более \textcolor{AccentCyan}{\textbf{4000}} ежедневных запусков систем по всему миру.
+            \item Полностью \textcolor{TextHighlight}{\textbf{российская разработка}} (включено в Реестр ПО).
+        \end{itemize}
+    \end{roundbox}
+\end{frame}
+
+% Слайд 3: Суть продукта
+\begin{frame}{Что такое IndorRoadSign?}
+    \begin{simplebox}
+        Система \textcolor{AccentCyan}{\textbf{IndorRoadSign}} предназначена для проектирования и последующего изготовления дорожных знаков \textcolor{TextHighlight}{\textbf{любой сложности}}.
+        \vspace{0.5cm}
+        
+        Интуитивно понятный графический интерфейс и богатая библиотека шаблонов позволяют создавать проекты в строгом соответствии с действующими стандартами.
+    \end{simplebox}
+\end{frame}
+
+% Слайд 4: Ключевые возможности
+\begin{frame}{Ключевые возможности}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{roundbox}[Нормативы и шаблоны]
+                \begin{itemize}
+                    \item Поддержка \textcolor{AccentCyan}{ГОСТ Р 52290–2024}.
+                    \item Стандарты России, СНГ и Монголии.
+                    \item Автоматическая расстановка размеров.
+                \end{itemize}
+            \end{roundbox}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{roundbox}[Индивидуальность]
+                \begin{itemize}
+                    \item Знаки \textcolor{AccentCyan}{индивидуального} проектирования.
+                    \item Туристические указатели.
+                    \item Конструктор траекторий движения.
+                \end{itemize}
+            \end{roundbox}
+        \end{column}
+    \end{columns}
+    \vspace{0.5cm}
+    \begin{simplebox}
+        \centering
+        \textcolor{TextHighlight}{\textbf{Экспорт на производство:}} автоматическое создание масок для режущего плоттера и генерация чертежей.
+    \end{simplebox}
+\end{frame}
+
+% Слайд 5: Технологичность
+\begin{frame}{Технологичность и кроссплатформенность}
+    \begin{roundbox}[Системные требования]
+        Наши решения доступны не только для Windows. Мы обеспечиваем бесперебойную работу на отечественных ОС.
+        \vspace{0.3cm}
+        \begin{itemize}
+            \item \textcolor{AccentCyan}{\textbf{ОС:}} Windows 10/11, \textcolor{TextHighlight}{Astra Linux}, РЕД ОС.
+            \item \textcolor{AccentCyan}{\textbf{Архитектура:}} x64.
+            \item \textcolor{AccentCyan}{\textbf{ОЗУ:}} от 8 Гб (рекомендовано 16 Гб).
+            \item \textcolor{AccentCyan}{\textbf{Графика:}} Поддержка DirectX 11.
+        \end{itemize}
+    \end{roundbox}
+\end{frame}
+
+% Слайд 6: Инвестиции и контакты
+\begin{frame}{Инвестиция в качество}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{roundbox}[Лицензирование]
+                \begin{itemize}
+                    \item Бессрочное использование.
+                    \item \textcolor{AccentCyan}{\textbf{19 000 руб.}} за рабочее место.
+                    \item Включает 12 месяцев обновлений и поддержки.
+                    \item Доступна бесплатная пробная версия.
+                \end{itemize}
+            \end{roundbox}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{simplebox}
+                \centering
+                \textbf{Свяжитесь с нами}\\[0.3cm]
+                \textcolor{AccentCyan}{8 800 333-08-05}\\[0.2cm]
+                \textcolor{TextHighlight}{info@indorsoft.ru}\\[0.2cm]
+                indorsoft.ru
+            \end{simplebox}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\end{document}
