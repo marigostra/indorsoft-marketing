@@ -1,0 +1,146 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% --- Фантастическая цветовая палитра (Sci-Fi / Cyberpunk) ---
+\definecolor{SpaceDark}{HTML}{0A0A1A}   % Глубокий темный фон
+\definecolor{NeonCyan}{HTML}{00F0FF}    % Неоновый голубой для заголовков
+\definecolor{CyberPurple}{HTML}{BD00FF} % Пурпурный для акцентов
+\definecolor{ElectricBlue}{HTML}{0055FF}% Синий для блоков
+\definecolor{TextLight}{HTML}{E0E6ED}   % Светло-серый для текста
+\definecolor{NeonGreen}{HTML}{39FF14}   % Зеленый для цифр и достижений
+
+% --- Настройка стиля Beamer ---
+\setbeamercolor{background canvas}{bg=SpaceDark}
+\setbeamercolor{normal text}{fg=TextLight}
+\setbeamercolor{frametitle}{fg=NeonCyan}
+\setbeamercolor{title}{fg=NeonCyan}
+\setbeamercolor{subtitle}{fg=CyberPurple}
+\setbeamercolor{itemize item}{fg=CyberPurple}
+\setbeamercolor{itemize subitem}{fg=NeonCyan}
+\setbeamercolor{block title}{bg=ElectricBlue, fg=white}
+\setbeamercolor{block body}{bg=SpaceDark!80!ElectricBlue, fg=TextLight}
+
+\setbeamertemplate{navigation symbols}{} % Убираем лишние символы
+\setbeamertemplate{frametitle}{
+    \vspace{0.5cm}
+    \textbf{\Large\insertframetitle}
+    \par\textcolor{CyberPurple}{\rule{\textwidth}{1pt}}
+}
+
+% --- Информация для титульного слайда ---
+\title{\textbf{ИНДОРСОФТ}}
+\subtitle{Цифровая эволюция дорожной инфраструктуры}
+\author{САПР, BIM и ГИС нового поколения}
+\date{Томск, Россия}
+
+\begin{document}
+
+% Слайд 1: Титульный
+\begin{frame}
+    \titlepage
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (current page.south east) {
+            \textcolor{NeonCyan}{\textbf{> Системы запущены. Полет нормальный.}}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+% Слайд 2: Масштаб и Драйв
+\begin{frame}{Масштаб и Драйв}
+    Мы не просто пишем код. Мы оцифровываем артерии стран.
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item \textcolor{NeonGreen}{\textbf{20+ лет}} непрерывных инноваций (с 2003 года).
+        \item \textcolor{NeonGreen}{\textbf{4000+}} ежедневных запусков систем по всему миру.
+        \item \textcolor{NeonGreen}{\textbf{300 000+ км}} дорог проектируется и эксплуатируется на нашем ПО.
+        \item \textbf{Полный цикл:} от полевых изысканий до умной эксплуатации.
+    \end{itemize}
+\end{frame}
+
+% Слайд 3: Экосистема решений
+\begin{frame}{Экосистема IndorSoft}
+    Единая цифровая среда для любых задач:
+    \vspace{0.3cm}
+    \begin{columns}[T]
+        \begin{column}{0.33\textwidth}
+            \textbf{\textcolor{NeonCyan}{ПРОЕКТИРОВАНИЕ (BIM)}}
+            \begin{itemize}
+                \item IndorCAD (Road, Site, Topo)
+                \item IndorTrafficPlan
+                \item IndorPavement
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \textbf{\textcolor{CyberPurple}{ЭКСПЛУАТАЦИЯ (ГИС)}}
+            \begin{itemize}
+                \item IndorRoad
+                \item IndorCurator
+                \item IndorField
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \textbf{\textcolor{NeonGreen}{УНИВЕРСАЛЬНЫЕ}}
+            \begin{itemize}
+                \item IndorCloud (облака точек)
+                \item IndorMap
+                \item IndorDraw
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Слайд 4: Для Бизнеса
+\begin{frame}{Почему мы нужны Бизнесу (B2B)}
+    \textbf{Максимальная рентабельность и скорость выдачи проектов.}
+    \vspace{0.3cm}
+    \begin{itemize}
+        \item \textbf{BIM-моделирование под ключ:} Легкое прохождение госэкспертизы и соответствие Постановлению № 331.
+        \item \textbf{Комплексный инжиниринг:} Мы берем на себя изыскания, обследование ИССО и создание информационных моделей.
+        \item \textbf{Бесшовная интеграция:} Сборка и передача данных в S-Info с поддержкой требуемых уровней детализации (LOD).
+        \item \textbf{Гибкое лицензирование:} Коммерческие лицензии, лицензии выходного дня, оперативная техподдержка.
+    \end{itemize}
+\end{frame}
+
+% Слайд 5: Для Государства
+\begin{frame}{Стратегический партнер Государства (B2G)}
+    \textbf{Цифровой суверенитет и тотальный контроль инфраструктуры.}
+    \vspace{0.3cm}
+    \begin{itemize}
+        \item \textbf{Импортозамещение:} 100\% продуктов включены в Реестр российского ПО.
+        \item \textbf{Строгое соответствие ГОСТ:} Автоматическая поддержка актуальных стандартов (вкл. ГОСТ Р 71360–2024).
+        \item \textbf{Умная эксплуатация:} ГИС IndorRoad для паспортизации, диагностики и мониторинга ПОДД в реальном времени.
+        \item \textbf{ИИ-анализ трафика:} IndorIntensity для обработки видеоданных и оптимизации транспортных потоков.
+    \end{itemize}
+\end{frame}
+
+% Слайд 6: Для Науки и Образования
+\begin{frame}{Фундамент для Науки и Кадров}
+    \textbf{Мы вышли из академической среды и двигаем науку вперед.}
+    \vspace{0.3cm}
+    \begin{itemize}
+        \item \textbf{Мощная научная база:} CEO — доктор технических наук, профессор, академик РАТ. В основе ПО — уникальные алгоритмы вычислительной геометрии.
+        \item \textbf{Инвестиции в будущее:} Бесплатные учебные лицензии для ВУЗов, преподавателей и студентов.
+        \item \textbf{Обмен опытом:} Собственный журнал «САПР и ГИС автодорог», издание монографий, открытые видеокурсы.
+        \item \textbf{Стажировки:} Растим программистов, аналитиков и инженеров-дорожников прямо в нашем офисе (1220 м² в центре Томска).
+    \end{itemize}
+\end{frame}
+
+% Слайд 7: Контакты
+\begin{frame}{Начать интеграцию}
+    \begin{center}
+        \Large \textcolor{NeonCyan}{\textbf{Готовы к цифровой трансформации?}}
+        
+        \vspace{0.8cm}
+        \normalsize
+        \textbf{Web:} indorsoft.ru \\
+        \textbf{Email:} info@indorsoft.ru \\
+        \textbf{Phone:} 8 800 333-08-05 \\
+        \vspace{0.5cm}
+        \textcolor{CyberPurple}{\textbf{IndorSoft. Проектируем будущее. Эксплуатируем с умом.}}
+    \end{center}
+\end{frame}
+
+\end{document}
