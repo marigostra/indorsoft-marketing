@@ -25,5 +25,34 @@
     "availability": "https://schema.org/InStock"
    },
     "author": {
-	  },
+	    "@type": "Organization",
+    "name": "ИндорСофт",
+    "url": "https://indorsoft.ru",
+    "logo": "https://indorsoft.ru/images/logo.png",
+    "foundingDate": "2003",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Томск",
+      "addressCountry": "RU",
+      "streetAddress": "пр. Комсомольский, 70, офис 5001"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+7-800-333-08-05",
+        "contactType": "customer service",
+        "areaServed": "RU",
+        "availableLanguage": "ru"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+7-3822-650-450",
+        "contactType": "office",
+        "email": "info@indorsoft.ru",
+        "areaServed": "RU",
+        "availableLanguage": "ru"
+      }
+    ]
+
+	  }
 }
