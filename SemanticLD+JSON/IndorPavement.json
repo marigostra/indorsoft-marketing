@@ -13,7 +13,7 @@
       "softwareHelp": "http://help.indorsoft.ru/IndorPavement/",
       "downloadUrl": "https://indorsoft.ru/download/files/products/30-IndorPavement/Distrib/IndorPavement-2026.3.0.msi",
       "fileSize": "611 MB",
-      "requirements": "Архитектура х64, ОЗУ от 4 ГБ, видеоадаптер с поддержкой DirectX 11",
+      "requirements": "Архитектура x64, видеоадаптер с поддержкой DirectX 11, разрешение экрана не менее 1280 × 1024, рекомендуется 3840 × 2160",
       "isAccessibleForFree": false,
       "availableOnDevice": "Desktop",
       "memoryRequirements": "4 GB (минимально), GB (рекомендовано)",
